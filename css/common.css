@@ -1,0 +1,37 @@
+:root {
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Roboto Condensed", sans-serif;
+  --color-primary: #2daab8;
+}
+
+html {
+  font-family: var(--font-primary);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-secondary);
+}
+
+h1 {
+  color: var(--color-primary);
+}
+
+nav li:not(:first-child):not(:last-child) {
+  margin: 0 2rem;
+}
+
+nav a {
+  color: #000;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.current,
+nav a:hover {
+  color: var(--color-primary);
+  text-decoration: line-through;
+}
+
+.nav-top {
+  font-size: 1.25rem;
+}

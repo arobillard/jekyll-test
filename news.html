@@ -1,5 +1,15 @@
 ---
-layout: default
+layout: news
+title: News
 ---
 
 <h1>News</h1>
+<ul>
+  {% for news in site.posts  %}
+  <!-- can add a limit > limit:1 -->
+    <li>
+      <a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
+      <p>{{news.meta}}</p>
+    </li>
+  {% endfor %}
+</ul>

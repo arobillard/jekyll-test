@@ -1,0 +1,7 @@
+<nav class="{{include.navClass}}">
+  <ul class="list-group-inline">
+    <li><a href="{{site.baseurl}}/index.html" class="{% if page.url == '/' %}current{% endif %}">Start Point Homies</a></li>
+    <li><a href="{{site.baseurl}}/news/" class="{% if page.url contains 'news' or page.url contains 'recently-discovered' %}current{% endif %}">News</a></li>
+    <li><a href="{{site.baseurl}}/products/" class="{% if page.url contains 'products' %}current{% endif %}">Products</a></li>
+  </ul>
+</nav>

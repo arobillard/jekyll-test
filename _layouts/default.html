@@ -2,28 +2,25 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Jekyll Test</title>
+  <title>{% if page.title %}{{page.title}} · {% endif %}Jekyll Test{% if page.titleAfter %} · {{page.titleAfter}}{% endif %}</title>
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="css/modules.css" rel="stylesheet">
-  <link href="css/grid.css" rel="stylesheet">
-  <link href="css/type.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
+  <link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,400i,700" rel="stylesheet">
 </head>
 <body>
 
-<header class="masthead">
+<header class="masthead island">
   <strong>Super Cool Jekyll Site</strong>
-  <nav>
-    <ul class="navbar">
-      <li><a href="{{site.baseurl}}/index.html">Home</a></li>
-      <li><a href="{{site.baseurl}}/news.html">News</a></li>
-    </ul>
-  </nav>
+  {% include nav.html navClass='nav-top' %}
 </header>
 
 {{content}}
+
+<footer>
+  {% include nav.html navClass='nav-bottom' %}
+</footer>
 
 </body>
 </html>
